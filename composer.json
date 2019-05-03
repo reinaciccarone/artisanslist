@@ -1,0 +1,5 @@
+{
+    "require": {
+        "uuf6429/force.com-toolkit-for-php": "^27.0"
+    }
+}
