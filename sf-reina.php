@@ -111,7 +111,7 @@ if ($post_after->post_type == 'listing') {
 	define("SECURITY_TOKEN", "");
 
 	require_once ('vendor/uuf6429/force.com-toolkit-for-php/soapclient/SforceEnterpriseClient.php');
-
+	try {
 	$mySforceConnection = new SforceEnterpriseClient();
 	$mySforceConnection->createConnection(dirname(__FILE__) . "/includes/wsdl--enterprise.xml");
 	$mySforceConnection->login(USERNAME, PASSWORD.SECURITY_TOKEN);
@@ -190,7 +190,9 @@ if ($post_after->post_type == 'listing') {
 		// exit();
 
 	}
-
+	} catch {
+		return true;
+	}
 	}
 
 	return true;
