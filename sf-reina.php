@@ -107,7 +107,7 @@ if ($post_after->post_type == 'listing') {
 
 
 	define("USERNAME", "");
-	define("PASSWORD", "");
+	define("PASSWORD", get_field('sf_password', 2556));
 	define("SECURITY_TOKEN", "");
 
 	require_once ('vendor/uuf6429/force.com-toolkit-for-php/soapclient/SforceEnterpriseClient.php');
